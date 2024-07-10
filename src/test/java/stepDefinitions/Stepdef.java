@@ -157,7 +157,7 @@ public class Stepdef extends BaseClass
 		// Registered - default
 		// The customer cannot be in both 'Guests' and 'Registered' customer roles
 		// Add the customer to 'Guests' or 'Registered' customer role
-		addCust.setCustomerRoles("Guest");
+		addCust.setCustomerRoles("Guests");
 		Thread.sleep(3000);
 
 		addCust.setManagerOfVendor("Vendor 2");

@@ -7,7 +7,8 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features=".//Features//",
+		features=".//Features",
+		//features=".//Features//Login1.feature",
 		glue="stepDefinitions",
 		monochrome=true,
 		tags= {"@sanity"},

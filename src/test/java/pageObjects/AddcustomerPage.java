@@ -17,15 +17,19 @@ public class AddcustomerPage {
 		PageFactory.initElements(ldriver, this);
 	}
 	
-	By lnkCustomers_menu=By.xpath("//a[@href='#']//span[contains(text(),'Customers')]");
-	By lnkCustomers_menuitem=By.xpath("//span[@class='menu-item-title'][contains(text(),'Customers')]");
+	//By lnkCustomers_menu=By.xpath("//a[@href='#']//span[contains(text(),'Customers')]");
+	By lnkCustomers_menu=By.xpath("//a[@href='#']//p[contains(text(),'Customers')]");
+	//By lnkCustomers_menuitem=By.xpath("//span[@class='menu-item-title'][contains(text(),'Customers')]");
+	By lnkCustomers_menuitem=By.xpath("//a[@href='/Admin/Customer/List']//p[contains(text(),'Customers')]");
 	
-	By btnAddnew=By.xpath("//a[@class='btn bg-blue']"); //Add new
+	//By btnAddnew=By.xpath("//a[@class='btn bg-blue']"); //Add new
+	By btnAddnew=By.xpath("//i[@class='fas fa-plus-square']");
 		
 	By txtEmail=By.xpath("//input[@id='Email']");
 	By txtPassword=By.xpath("//input[@id='Password']");
 	
 	By txtcustomerRoles=By.xpath("//div[@class='k-multiselect-wrap k-floatwrap']");
+	//By txtcustomerRoles=By.xpath("//span[@class='select2 select2-container select2-container--default select2-container--above select2-container--focus']//input[@role='searchbox']");
 	
 	By lstitemAdministrators=By.xpath("//li[contains(text(),'Administrators')]");
 	By lstitemRegistered=By.xpath("//li[contains(text(),'Registered')]");
@@ -82,8 +86,9 @@ public class AddcustomerPage {
 		{
 			if(!role.equals("Vendors")) //If role is vendors should not delete Register as per req.
 			{
-			ldriver.findElement(By.xpath("//*[@id=\"SelectedCustomerRoleIds_taglist\"]/li/span[2]")).click();
+			ldriver.findElement(By.xpath("//span[@role='presentation']")).click();
 			}
+			
 			
 			ldriver.findElement(txtcustomerRoles).click();
 						
